@@ -1,0 +1,22 @@
+.something {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+  touch-action: manipulation;
+  border: 2px solid transparent;
+  border-color: #008489;
+  background: transparent;
+  width: 32px;
+  height: 32px;
+  border-width: 1px;
+
+}
+.something:hover {
+  background-color: white;
+  color: #FF5A5F;
+  border: 1px solid #FF5A5F;
+  transition: .3s;
+}

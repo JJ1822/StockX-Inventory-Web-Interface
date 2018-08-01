@@ -1,29 +1,35 @@
 import React from 'react';
 
+const ShowFormItem = ({update, brand, style, size, upcId}) => {
+  console.log(this);
+  return(
+    <div className="spot-options">
+      <input
+        type="text"
+        placeholder="Brand of Shoe"
+        onChange={update('brand')}
+        value={brand}
+        />
+      <input
+        type="text"
+        placeholder="Style of Shoe"
+        onChange={update('style')}
+        value={style}
+        />
+      <input
+        type="text"
+        placeholder="Size of Shoe"
+        onChange={update('size')}
+        value={size}
+        />
+      <input
+        type="text"
+        placeholder="UPC_ID"
+        onChange={update('upc_id')}
+        value={upcId}
+        />
+    </div>
+  );
+};
 
-class Shelve extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: "",
-      brand: "brand",
-      style: "style",
-      size: "12",
-      upc_id: "0000"
-    }
-
-    this.count = 0;
-  }
-
-
-  render() {
-    return (
-      <div>
-        {this.noShoe()}
-      </div>
-    )
-  }
-
-}
-
-export default Shelve;
+export default ShowFormItem;
