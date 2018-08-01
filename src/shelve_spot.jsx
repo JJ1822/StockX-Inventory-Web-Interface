@@ -19,7 +19,6 @@ class Shelve extends React.Component {
     super(props);
     this.state = {
       modalIsOpen: false,
-      id: "",
       brand: "",
       style: "",
       size: "",
@@ -29,6 +28,7 @@ class Shelve extends React.Component {
     this.update = this.update.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.deleteShoe = this.deleteShoe.bind(this);
   }
 
   openModal() {
@@ -45,12 +45,17 @@ class Shelve extends React.Component {
     });
   }
 
-  handleClick() {
-
+  deleteShoe() {
+    this.setState({
+      brand: "",
+      style: "",
+      size: "",
+      upc_id: ""
+      });
   }
 
   noShoe() {
-    if(!this.state.id) {
+    if(!this.state.brand && !this.state.size && !this.state.style && !this.state.upc_id) {
       return (
         <div>
           <button
@@ -62,12 +67,24 @@ class Shelve extends React.Component {
         </div>
       ) } else {
         return (
+          <div>
             <ul>
               <li>{this.state.brand}</li>
               <li>{this.state.style}</li>
               <li>{this.state.size}</li>
               <li>{this.state.upc_id}</li>
             </ul>
+            <button
+              onClick={this.openModal}
+              >
+              Edit
+            </button>
+            <button
+              onClick={this.deleteShoe}
+              >
+              Delete
+            </button>
+          </div>
           )
       }
   }
