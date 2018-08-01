@@ -21,16 +21,27 @@ class Shelve extends React.Component {
 
   }
 
+  noShoe() {
+    if(!this.state.id) {
+      return (
+        <div>"+"</div>
+      ) } else {
+        return (
+            <ul>
+              <li>{this.state.brand}</li>
+              <li>{this.state.style}</li>
+              <li>{this.state.size}</li>
+              <li>{this.state.upc_id}</li>
+            </ul>
+          )
+      }
+  }
+
 
   render() {
     return (
       <div>
-        <ul>
-          <li>{this.state.brand}</li>
-          <li>{this.state.style}</li>
-          <li>{this.state.size}</li>
-          <li>{this.state.upc_id}</li>
-        </ul>
+        {this.noShoe()}
       </div>
     )
   }
