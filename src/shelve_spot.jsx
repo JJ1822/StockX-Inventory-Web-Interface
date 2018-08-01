@@ -24,7 +24,9 @@ class Shelve extends React.Component {
   noShoe() {
     if(!this.state.id) {
       return (
-        <div>"+"</div>
+        <div>
+          <img src={window.location.origin + '/image/plus.svg'} />
+        </div>
       ) } else {
         return (
             <ul>
