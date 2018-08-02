@@ -14,3 +14,7 @@ We will need a form with the following fields for a shoe ( all generic text fiel
 - Style
 - Size
 - UPC ID
+
+Clone the repo.
+npm start.
+open http://localhost:3000/ if it doesn't open on its own.
