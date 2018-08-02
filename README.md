@@ -18,3 +18,5 @@ We will need a form with the following fields for a shoe ( all generic text fiel
 Clone the repo.
 npm start.
 open http://localhost:3000/ if it doesn't open on its own.
+
+Visit the live page: https://elegant-leakey-d51455.netlify.com/
