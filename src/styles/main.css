@@ -9,22 +9,24 @@
   border: 2px solid transparent;
   border-color: #008489;
   background: transparent;
-  width: 100px;
-  height: 100px;
-  border-width: 1px;
+  width: 90px;
+  height: 90px;
+  /*border-width: 1px;*/
 
 }
 .something:hover {
-  background-color: white;
-  color: #FF5A5F;
-  border: 1px solid #FF5A5F;
+  background-color: #484848;
+  /*color: #FF5A5F;*/
+  /*border: 3px solid #FF5A5F;*/
   transition: .3s;
+
 }
 
 .something img {
-  width: 77%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  color: black;
 }
 
 .wrapper {
@@ -37,18 +39,73 @@
 }
 
 .shelve {
-  background-color: #444;
-  color: #fff;
+  background-color: #e8e6e6;
+  /*color: #fff;*/
+  border: 1px solid #444;
   border-radius: 5px;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15vh;
+  min-height: 15vh;
 }
 
 .new-shoe-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*display: flex;
+  align-items: center;*/
+  /*justify-content: center;*/
+
+}
+
+.current-shoe-wrapper {
+  width: 75%;
+}
+
+.button {
+  width: 50%;
+  height: 25px;
+  background-color: #FF5A5F;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #FF5A5F;
+  border: 1px solid #FF5A5F;
+  transition: .3s;
+
+}
+
+.ReactModal__Content {
+  height: 300px;
+  width: 225px;
+}
+
+input {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 22px);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+  font-style: bold;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+span {
+  font-weight: bold;
 }

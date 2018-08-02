@@ -1,24 +1,11 @@
 import React from 'react';
 import ShowFormItem from './show_form';
-import Modal from 'react-modal';
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
-
 
 class Shelve extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalIsOpen: false,
+      displayForm: false,
       brand: "",
       style: "",
       size: "",
@@ -29,6 +16,7 @@ class Shelve extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.deleteShoe = this.deleteShoe.bind(this);
+    this.editShoe = this.editShoe.bind(this);
   }
 
   openModal() {
@@ -45,6 +33,12 @@ class Shelve extends React.Component {
     });
   }
 
+  editShoe() {
+    this.setState({
+      displayForm: true
+      });
+  }
+
   deleteShoe() {
     this.setState({
       brand: "",
@@ -58,28 +52,31 @@ class Shelve extends React.Component {
     if(!this.state.brand && !this.state.size && !this.state.style && !this.state.upc_id) {
       return (
         <div className="new-shoe-wrapper">
+          <h3>Shelf Available</h3>
           <button
             className="something"
-            onClick={this.openModal}
+            onClick={this.editShoe}
             >
             <img src={window.location.origin + '/image/plus.svg'} />
           </button>
         </div>
       ) } else {
         return (
-          <div>
+          <div className="current-shoe-wrapper">
             <ul>
-              <li>{this.state.brand}</li>
-              <li>{this.state.style}</li>
-              <li>{this.state.size}</li>
-              <li>{this.state.upc_id}</li>
+              <li><span>Brand:</span> {this.state.brand}</li>
+              <li><span>Style:</span> {this.state.style}</li>
+              <li><span>Size:</span> {this.state.size}</li>
+              <li><span>Upc_Id:</span> {this.state.upc_id}</li>
             </ul>
             <button
+              className="button"
               onClick={this.openModal}
               >
               Edit
             </button>
             <button
+              className="button"
               onClick={this.deleteShoe}
               >
               Delete
@@ -91,25 +88,32 @@ class Shelve extends React.Component {
 
 
   render() {
+    const shoeForm = () => {
+      if(this.state.displayForm) {
+        return (
+          <ShowFormItem
+            update={this.update}
+            brand={this.state.brand}
+            style={this.state.style}
+            size={this.state.size}
+            upcId={this.state.upc_id}
+            closeModal={this.closeModal}
+            />
+        )
+      } else {
+        return (
+          this.noShoe()
+        )
+      }
+    }
+
     return (
       <div className="shelve">
-        {this.noShoe()}
 
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-        <ShowFormItem
-          update={this.update}
-          brand={this.state.brand}
-          style={this.state.style}
-          size={this.state.size}
-          upcId={this.state.upc_id}
-          closeModal={this.closeModal}
-          />
-        </Modal>
+        {shoeForm()}
+
+
+
       </div>
     )
   }
@@ -117,3 +121,11 @@ class Shelve extends React.Component {
 }
 
 export default Shelve;
+
+// <Modal
+//   isOpen={this.state.modalIsOpen}
+//   onRequestClose={this.closeModal}
+//   style={customStyles}
+//   contentLabel="Example Modal"
+// >
+//   </Modal>
