@@ -1,9 +1,6 @@
 The Challenge:
 
-StockX is looking to build an inventory system for storing shoes. We will need a web interface to
-do this. Create a github repo to store your code in (If you would like a private repo for this, let us
-know and we will set up a private one for you). Please follow the instructions below and create a
-fairly simple inventory system.
+StockX is looking to build an inventory system for storing shoes.
 Create a web interface using React.js
 We will need a 5x5 grid to display the inventory shelf, each slot should show which shoe is
 placed in it.
@@ -14,9 +11,13 @@ We will need a form with the following fields for a shoe ( all generic text fiel
 - Style
 - Size
 - UPC ID
+----------------------------------------
 
 Clone the repo.
+
 npm start.
-open http://localhost:3000/ if it doesn't open on its own.
+
+http://localhost:3000/ if it doesn't open on its own.
+
 
 Visit the live page: https://elegant-leakey-d51455.netlify.com/
