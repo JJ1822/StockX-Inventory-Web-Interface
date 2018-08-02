@@ -15,18 +15,18 @@ class App extends Component {
           {spot}
         </div>
         <footer>
-            <div class="footer-icon">
-              <a href="https://www.linkedin.com/in/jay-johnson-4b577341/" class="link" target="_blank">
-                <i class="fab fa-linkedin"></i>
+            <div className="footer-icon">
+              <a href="https://www.linkedin.com/in/jay-johnson-4b577341/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin"></i>
               </a>
-              <a href="https://github.com/JJ1822" class="git" target="_blank">
-                <i class="fab fa-github github"></i>
+              <a href="https://github.com/JJ1822" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github github"></i>
               </a>
-              <a href="https://jayjohnson.info" class="angel" target="_blank">
-                <i class="fas fa-user-circle"></i>
+              <a href="https://jayjohnson.info" target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-user-circle"></i>
               </a>
             </div>
-            <div class="">
+            <div>
               <p>
                 Copyright ©
                 <script>document.write(new Date().getFullYear());</script>

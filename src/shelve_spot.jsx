@@ -50,7 +50,7 @@ class Shelve extends React.Component {
             className="something"
             onClick={this.openForm}
             >
-            <img src={window.location.origin + '/image/plus.svg'} />
+            <img src={window.location.origin + '/image/plus.svg'} alt="add button" />
           </button>
         </div>
       ) } else {
@@ -102,9 +102,7 @@ class Shelve extends React.Component {
 
     return (
       <div className="shelve">
-
         {shoeForm()}
-
       </div>
     )
   }
@@ -112,11 +110,3 @@ class Shelve extends React.Component {
 }
 
 export default Shelve;
-
-// <Modal
-//   isOpen={this.state.modalIsOpen}
-//   onRequestClose={this.closeModal}
-//   style={customStyles}
-//   contentLabel="Example Modal"
-// >
-//   </Modal>
