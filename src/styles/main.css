@@ -9,8 +9,8 @@
   border: 2px solid transparent;
   border-color: #008489;
   background: transparent;
-  width: 32px;
-  height: 32px;
+  width: 100px;
+  height: 100px;
   border-width: 1px;
 
 }
@@ -19,4 +19,36 @@
   color: #FF5A5F;
   border: 1px solid #FF5A5F;
   transition: .3s;
+}
+
+.something img {
+  width: 77%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 18% 18% 18% 18% 18%;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  justify-content: center;
+}
+
+.shelve {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+}
+
+.new-shoe-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

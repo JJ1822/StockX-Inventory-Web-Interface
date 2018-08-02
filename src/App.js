@@ -7,9 +7,9 @@ class App extends Component {
     var spot = Array(25).fill().map((_, i) => {
       return <Shelve key={i} />
       });
-      
+
     return (
-      <div className="App">
+      <div className="wrapper">
         {spot}
       </div>
     );

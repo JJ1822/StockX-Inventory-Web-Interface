@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShowFormItem = ({update, brand, style, size, upcId}) => {
+const ShowFormItem = ({update, brand, style, size, upcId, closeModal}) => {
   console.log(this);
   return(
     <div className="spot-options">
@@ -28,6 +28,9 @@ const ShowFormItem = ({update, brand, style, size, upcId}) => {
         onChange={update('upc_id')}
         value={upcId}
         />
+      <button
+        onClick={closeModal}
+        >Add Shoe</button>
     </div>
   );
 };

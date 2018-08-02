@@ -69,3 +69,7 @@ button,
 input[type="submit"] {
   cursor: pointer;
 }
+
+#root {
+  padding: 40px;
+}

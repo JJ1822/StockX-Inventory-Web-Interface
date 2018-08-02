@@ -57,7 +57,7 @@ class Shelve extends React.Component {
   noShoe() {
     if(!this.state.brand && !this.state.size && !this.state.style && !this.state.upc_id) {
       return (
-        <div>
+        <div className="new-shoe-wrapper">
           <button
             className="something"
             onClick={this.openModal}
@@ -92,7 +92,7 @@ class Shelve extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="shelve">
         {this.noShoe()}
 
         <Modal
@@ -107,6 +107,7 @@ class Shelve extends React.Component {
           style={this.state.style}
           size={this.state.size}
           upcId={this.state.upc_id}
+          closeModal={this.closeModal}
           />
         </Modal>
       </div>
