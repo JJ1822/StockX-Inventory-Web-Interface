@@ -59,7 +59,7 @@
 }
 
 .current-shoe-wrapper {
-  width: 75%;
+  width: 90%;
 }
 
 .button {
@@ -116,9 +116,19 @@ h3 {
 }
 
 li {
-  margin-bottom: 4px;
+  margin-bottom: 7px;
+  font-size: 17px;
 }
 
 span {
   font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+
+    grid-template-columns: 90%;
+
+  }
+
 }
