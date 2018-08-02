@@ -1,9 +1,10 @@
 import React from 'react';
 
-const ShowFormItem = ({update, brand, style, size, upcId, closeModal}) => {
+const ShowFormItem = ({update, brand, style, size, upcId, closeForm}) => {
   console.log(this);
   return(
     <div className="spot-options">
+      <span onClick={closeForm} className="form-close">&times;</span>
       <input
         type="text"
         placeholder="Brand of Shoe"
@@ -29,7 +30,8 @@ const ShowFormItem = ({update, brand, style, size, upcId, closeModal}) => {
         value={upcId}
         />
       <button
-        onClick={closeModal}
+        onClick={closeForm}
+        className="button"
         >Add Shoe</button>
     </div>
   );

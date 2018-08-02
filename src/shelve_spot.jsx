@@ -13,30 +13,23 @@ class Shelve extends React.Component {
     }
 
     this.update = this.update.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.openForm = this.openForm.bind(this);
+    this.closeForm = this.closeForm.bind(this);
     this.deleteShoe = this.deleteShoe.bind(this);
-    this.editShoe = this.editShoe.bind(this);
   }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
+  openForm() {
+    this.setState({displayForm: true});
   }
 
-  closeModal() {
-    this.setState({modalIsOpen: false});
+  closeForm() {
+    this.setState({displayForm: false});
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
-  }
-
-  editShoe() {
-    this.setState({
-      displayForm: true
-      });
   }
 
   deleteShoe() {
@@ -48,14 +41,14 @@ class Shelve extends React.Component {
       });
   }
 
-  noShoe() {
+  checkShoe() {
     if(!this.state.brand && !this.state.size && !this.state.style && !this.state.upc_id) {
       return (
         <div className="new-shoe-wrapper">
           <h3>Shelf Available</h3>
           <button
             className="something"
-            onClick={this.editShoe}
+            onClick={this.openForm}
             >
             <img src={window.location.origin + '/image/plus.svg'} />
           </button>
@@ -71,7 +64,7 @@ class Shelve extends React.Component {
             </ul>
             <button
               className="button"
-              onClick={this.openModal}
+              onClick={this.openForm}
               >
               Edit
             </button>
@@ -97,12 +90,12 @@ class Shelve extends React.Component {
             style={this.state.style}
             size={this.state.size}
             upcId={this.state.upc_id}
-            closeModal={this.closeModal}
+            closeForm={this.closeForm}
             />
         )
       } else {
         return (
-          this.noShoe()
+          this.checkShoe()
         )
       }
     }
@@ -111,8 +104,6 @@ class Shelve extends React.Component {
       <div className="shelve">
 
         {shoeForm()}
-
-
 
       </div>
     )

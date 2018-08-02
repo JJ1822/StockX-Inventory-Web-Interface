@@ -47,13 +47,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 15vh;
+  height: 175px;
 }
 
 .new-shoe-wrapper {
+  overflow: scroll;
   /*display: flex;
-  align-items: center;*/
-  /*justify-content: center;*/
+  align-items: center;
+  justify-content: center;*/
 
 }
 
@@ -81,6 +82,13 @@
 
 }
 
+.form-close {
+  font-size: 19px;
+  cursor: pointer;
+  top: -3px;
+  position: relative;
+}
+
 .ReactModal__Content {
   height: 300px;
   width: 225px;
@@ -89,13 +97,18 @@
 input {
   display: block;
   border: 1px solid #ccc;
-  padding: 10px;
-  width: calc(100% - 22px);
+  padding: 5px;
+  /*width: 100%;*/
   font-family: 'Quicksand', sans-serif;
-  font-size: 19px;
+  font-size: 15px;
   font-style: bold;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   border-radius: 2px;
+}
+
+input:focus {
+  border-color: #008489;
+  transition: .3s;
 }
 
 h3 {
