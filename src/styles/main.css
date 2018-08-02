@@ -40,6 +40,7 @@
 
 .shelve {
   background-color: #e8e6e6;
+  /*overflow: scroll;*/
   /*color: #fff;*/
   border: 1px solid #444;
   border-radius: 5px;
@@ -51,7 +52,7 @@
 }
 
 .new-shoe-wrapper {
-  overflow: scroll;
+
   /*display: flex;
   align-items: center;
   justify-content: center;*/
@@ -72,6 +73,10 @@
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 5px;
   border-radius: 5px;
+}
+
+.add-shoe {
+  width: 70%;
 }
 
 .button:hover {
@@ -98,7 +103,7 @@ input {
   display: block;
   border: 1px solid #ccc;
   padding: 5px;
-  /*width: 100%;*/
+  width: 92%;
   font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   font-style: bold;
@@ -121,6 +126,13 @@ li {
 }
 
 span {
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 35px;
   font-weight: bold;
 }
 

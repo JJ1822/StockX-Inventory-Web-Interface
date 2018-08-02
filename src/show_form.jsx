@@ -31,7 +31,7 @@ const ShowFormItem = ({update, brand, style, size, upcId, closeForm}) => {
         />
       <button
         onClick={closeForm}
-        className="button"
+        className="button add-shoe"
         >Add Shoe</button>
     </div>
   );

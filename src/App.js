@@ -9,9 +9,13 @@ class App extends Component {
       });
 
     return (
-      <div className="wrapper">
-        {spot}
+      <div>
+        <h1>StockX Inventory System</h1>
+        <div className="wrapper">
+          {spot}
+        </div>
       </div>
+
     );
   }
 }
