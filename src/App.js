@@ -14,6 +14,27 @@ class App extends Component {
         <div className="wrapper">
           {spot}
         </div>
+        <footer>
+            <div class="footer-icon">
+              <a href="https://www.linkedin.com/in/jay-johnson-4b577341/" class="link" target="_blank">
+                <i class="fab fa-linkedin-in linkedin"></i>
+              </a>
+              <a href="https://github.com/JJ1822" class="git" target="_blank">
+                <i class="fab fa-github github"></i>
+              </a>
+              <a href="https://angel.co/jay-johnson-32" class="angel" target="_blank">
+                <i class="fab fa-angellist angellist"></i>
+              </a>
+            </div>
+            <div class="">
+              <p>
+                Copyright ©
+                <script>document.write(new Date().getFullYear());</script>
+                Jay Brandon Johnson
+              </p>
+            </div>
+      </footer>
+
       </div>
 
     );
