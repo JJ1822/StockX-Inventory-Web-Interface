@@ -47,7 +47,7 @@ class Shelve extends React.Component {
         <div className="new-shoe-wrapper">
           <h3>Shelf Available</h3>
           <button
-            className="something"
+            className="new_spot_button"
             onClick={this.openForm}
             >
             <img src={window.location.origin + '/image/plus.svg'} alt="add button" />

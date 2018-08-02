@@ -21,3 +21,4 @@ http://localhost:3000/ if it doesn't open on its own.
 
 
 Visit the live page: https://elegant-leakey-d51455.netlify.com/
+Check it out mobile as well!
