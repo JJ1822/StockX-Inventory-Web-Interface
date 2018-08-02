@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Shelve from './shelve_spot';
+import Shelve from './component/shelve_spot';
 
 class App extends Component {
   render() {
