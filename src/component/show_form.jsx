@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ShowFormItem = ({update, brand, style, size, upcId, closeForm}) => {
-  console.log(this);
   return(
     <div className="spot-options">
       <span onClick={closeForm} className="form-close">&times;</span>
